@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/eldani17/angular-ch/issues"
   },
-  "homepage": "https://github.com/eldani17/angular-ch#readme"
+  "homepage": "https://github.com/eldani17/angular-ch#readme",
+  "devDependencies": {
+    "@types/node": "^16.11.7"
+  }
 }
