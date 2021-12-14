@@ -1,0 +1,31 @@
+<form [formGroup]="profileForm" >
+  <div class="form-group">
+    <label for="firstName">Nombre</label>
+    <input type="text" class="form-control" id="firstName" formControlName="firstName">
+    <small *ngIf="profileForm.get('firstName')?.touched && profileForm.get('firstName')?.errors?.['required']" class="form-text text-danger">Este campo es requerido.</small>
+  </div>
+  <div class="form-group">
+    <label for="lastName">Apellido</label>
+    <input type="text" class="form-control" id="lastName" formControlName="lastName">
+    <small *ngIf="profileForm.get('lastName')?.touched && profileForm.get('lastName')?.errors?.['required']" class="form-text text-danger">Este campo es requerido.</small>
+  </div>
+  <div class="form-group">
+    <label for="street">Dirección</label>
+    <input type="text" class="form-control" id="street" formControlName="street">
+    <small *ngIf="profileForm.get('street')?.touched && profileForm.get('street')?.errors?.['required']" class="form-text text-danger">Este campo es requerido.</small>
+  </div>
+  <div class="form-group">
+    <label for="city">Ciudad</label>
+    <input type="text" class="form-control" id="city" formControlName="city">
+    <small *ngIf="profileForm.get('city')?.touched && profileForm.get('city')?.errors?.['required']" class="form-text text-danger">Este campo es requerido.</small>
+  </div>
+  <div class="form-group">
+    <label for="state">Provincia</label>
+    <input type="text" class="form-control" id="state" formControlName="state">
+  </div>
+  <div class="form-group">
+    <label for="zip">Codigo Postal</label>
+    <input type="text" class="form-control" id="zip" formControlName="zip">
+  </div>
+  <button type="button" class="btn btn-primary" [disabled]="profileForm.invalid" (click)="handleSave()">Guardar</button>
+</form>
