@@ -11,6 +11,7 @@ import { ReactiveFormComponent } from "./components/reactive-form/reactive-form.
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { SignInModule } from "./pages/sign-in/sign-in.module";
 import { AppRoutingModule } from "./app-routing.module";
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -20,9 +21,11 @@ import { AppRoutingModule } from "./app-routing.module";
     CardComponent,
     SectionTestComponent,
     ReactiveFormComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     NgbModule,
     ReactiveFormsModule,
     FormsModule,

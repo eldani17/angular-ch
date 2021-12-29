@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1>Inicio</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4" *ngFor="let item of products">
+      <div class="card">
+        <h5>{{ item.name }}</h5>
+        <span>{{ item.reference }}</span>
+      </div>
+    </div>
+  </div>
+</div>

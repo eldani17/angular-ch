@@ -1,5 +1,5 @@
-<main class="form-signin">
-  <form [formGroup]="loginForm">
+<main class="form-register">
+  <form [formGroup]="registerForm">
     <div class="form-floating">
       <input
         type="email"
@@ -9,7 +9,7 @@
         formControlName="email"
       />
       <small
-        *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.errors?.['required']"
+        *ngIf="registerForm.get('email')?.touched && registerForm.get('email')?.errors?.['required']"
         class="form-text text-danger"
         >Este campo es requerido.</small
       >
@@ -23,7 +23,7 @@
         formControlName="password"
       />
       <small
-        *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.errors?.['required']"
+        *ngIf="registerForm.get('password')?.touched && registerForm.get('password')?.errors?.['required']"
         class="form-text text-danger"
         >Este campo es requerido.</small
       >
@@ -31,11 +31,11 @@
 
     <button
       class="w-100 btn btn-lg btn-primary"
-      [disabled]="loginForm.invalid"
-      (click)="handleLogin()"
+      [disabled]="registerForm.invalid"
+      (click)="handleRegister()"
     >
-      Iniciar sesión
+      Registrarse
     </button>
-    <a class="form-text text-primary" [routerLink]="'/register'">Registrarse</a>
+    <a class="form-text text-primary" [routerLink]="'/login'">Iniciar sesion</a>
   </form>
 </main>
